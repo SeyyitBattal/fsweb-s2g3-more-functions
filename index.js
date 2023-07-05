@@ -47,11 +47,9 @@ function ortalamaBul(sayilarG2) {
   if (sayilarG2.length === 0) {
     return null;
   }
-
   const toplamG2 = sayilarG2.reduce((total, ilk) => {
-    return (total = total + ilk);
+    return total + ilk;
   }, 0);
-
   return toplamG2 / sayilarG2.length;
 }
 console.log(ortalamaBul([50, -26, 153, 7]));
@@ -76,9 +74,16 @@ console.log(ortalamaBul([50, -26, 153, 7]));
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(sayilarG3, fOrtalama) {
+  if (sayilarG3.length === 0) {
+    return null;
+  }
+
+  const OrtalamaDeger = fOrtalama(sayilarG3);
+  const filtreli = sayilarG3.filter((buyukOlan) => buyukOlan >= OrtalamaDeger);
+  return filtreli;
 }
+console.log(ortalamadanBuyukleriBul([50, -26, 153, 7], ortalamaBul));
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
