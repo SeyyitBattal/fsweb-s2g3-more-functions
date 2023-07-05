@@ -16,9 +16,14 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(linkG1) {
+  if (linkG1 === "") {
+    return "";
+  }
+  const dosyaAdi = linkG1.split("/");
+  return dosyaAdi[dosyaAdi.length - 1];
 }
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
 
 /*
   GÖREV 2
@@ -38,9 +43,8 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
-}
+function ortalamaBul(sayilarG2) {}
+console.log(ortalamaBul([50, -26, 153, 7]));
 
 /*
   GÖREV 3
